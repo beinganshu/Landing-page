@@ -1,0 +1,55 @@
+const navId = document.getElementById("nav_menu"),
+  ToggleBtnId = document.getElementById("toggle_btn"),
+  CloseBtnId = document.getElementById("close_btn");
+
+ToggleBtnId.addEventListener("click", () => {
+  navId.classList.add("show");
+});
+
+CloseBtnId.addEventListener("click", () => {
+  navId.classList.remove("show");
+});
+
+
+
+gsap.from(".logo", {
+  opacity: 0,
+  y: -10,
+  delay: 1,
+  duration: 0.7,
+});
+
+gsap.from(".nav_menu_list .nav_menu_item", {
+  opacity: 0,
+  y: -10,
+  delay: 1.4,
+  duration: 0.5,
+  stagger: 0.3,
+});
+
+gsap.from(".toggle_btn", {
+  opacity: 0,
+  y: -10,
+  delay: 1.6,
+  duration: 0.7,
+});
+gsap.from(".main-heading", {
+  opacity: 0,
+  y: 20,
+  delay: 1.4,
+  duration: 1,
+});
+
+gsap.from(".grid-col-item", {
+  opacity: 0,
+  y: 15,
+  delay: 4,
+  duration: 1,
+});
+
+gsap.from(".btn_wrapper", {
+  opacity: 0,
+  y: 20,
+  delay: 2.8,
+  duration: 1,
+});
